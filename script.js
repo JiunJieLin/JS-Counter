@@ -1,44 +1,36 @@
 "use strict";
-const decrease = document.getElementById("btn-decrease");
-const reset = document.getElementById("btn-reset");
-const increase = document.getElementById("btn-increase");
+const setupCounter = function (buttons, numElement, initialValue) {
+  const decrease = buttons.decrease;
+  const reset = buttons.reset;
+  const increase = buttons.increase;
 
-const num = document.querySelector(".num");
-
-let count = 100;
-
-decrease.addEventListener("click", function () {
-  if (count > 0) {
+  let count = initialValue;
+  decrease.addEventListener("click", function () {
     count--;
-  } else {
+    numElement.innerHTML = count;
+  });
+
+  increase.addEventListener("click", function () {
+    count++;
+    numElement.innerHTML = count;
+  });
+  reset.addEventListener("click", function () {
     count = 0;
-  }
-  num.innerHTML = count;
-});
-increase.addEventListener("click", function () {
-  count++;
-  num.innerHTML = count;
-});
-reset.addEventListener("click", function () {
-  count = 0;
-  num.innerHTML = count;
-});
+    numElement.innerHTML = count;
+  });
+};
+const buttons1 = {
+  decrease: document.getElementById("btn-decrease"),
+  increase: document.getElementById("btn-increase"),
+  reset: document.getElementById("btn-reset"),
+};
+const numElement1 = document.querySelector(".num");
+setupCounter(buttons1, numElement1, 100);
 
-const decrease2 = document.getElementById("btn2-decrease");
-const reset2 = document.getElementById("btn2-reset");
-const increase2 = document.getElementById("btn2-increase");
-
-const num2 = document.querySelector(".num2");
-let counter = 200;
-decrease2.addEventListener("click", function () {
-  counter--;
-  num2.innerHTML = counter;
-});
-increase2.addEventListener("click", function () {
-  counter++;
-  num2.innerHTML = counter;
-});
-reset2.addEventListener("click", function () {
-  counter = 0;
-  num2.innerHTML = counter;
-});
+const buttons2 = {
+  decrease: document.getElementById("btn2-decrease"),
+  increase: document.getElementById("btn2-increase"),
+  reset: document.getElementById("btn2-reset"),
+};
+const numElement2 = document.querySelector(".num2");
+setupCounter(buttons2, numElement2, 200);
