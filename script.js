@@ -24,7 +24,7 @@ const reset2 = document.getElementById("btn2-reset");
 const increase2 = document.getElementById("btn2-increase");
 
 const num2 = document.querySelector(".num2");
-let counter = 100;
+let counter = 200;
 decrease2.addEventListener("click", function () {
   counter--;
   num2.innerHTML = counter;
