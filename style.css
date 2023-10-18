@@ -138,40 +138,41 @@ table {
 }
 /* start here */
 body {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   background-color: #edf5fe;
 }
+.container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid blue;
+  gap: 32px;
+}
 .content {
+  margin: 0auto;
+  border: 1px solid red;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 50px;
-  width: 600px;
-  height: 250px;
-  justify-content: space-around;
+  max-width: 800px;
   font-size: 40px;
   padding: 20px;
   background-color: white;
+  gap: 40px;
 }
 .content h1 {
   font-weight: 700;
-
-  margin-bottom: 20px;
 }
 .content p {
   font-weight: 700;
   font-size: 50px;
-  margin-bottom: 20px;
 }
 .btn {
   display: flex;
-  height: 50px;
-  width: 80%;
+  gap: 32px;
+  width: 100%;
   align-items: center;
   justify-content: space-between;
 }
@@ -180,5 +181,7 @@ body {
   padding: 5px 10px;
   background-color: #fff;
   border-radius: 5px;
+}
+.btn-letter {
   letter-spacing: 2px;
 }
