@@ -6,8 +6,13 @@ const increase = document.getElementById("btn-increase");
 const num = document.querySelector(".num");
 
 let count = 100;
+
 decrease.addEventListener("click", function () {
-  count--;
+  if (count > 0) {
+    count--;
+  } else {
+    count = 0;
+  }
   num.innerHTML = count;
 });
 increase.addEventListener("click", function () {
