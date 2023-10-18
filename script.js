@@ -2,6 +2,7 @@
 const decrease = document.getElementById("btn-decrease");
 const reset = document.getElementById("btn-reset");
 const increase = document.getElementById("btn-increase");
+
 const num = document.querySelector(".num");
 
 let count = 100;
